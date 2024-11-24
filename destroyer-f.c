@@ -8,12 +8,12 @@ int main(){
 char c;
 char unit[9][10];
 bool error = false;
-
+FILE* file;
 printf("Let's play :\n");
-
+file=fopen("question.txt","r");
 for(int i=0; i<9; i++){
     error = false;
-    fgets(unit[i], 11, stdin);
+    fgets(unit[i], 11, file);
     for(int j=0; j<10; j++){
         if(unit[i][j]=='\n'){
             while(j<10){
@@ -39,6 +39,7 @@ for(int i=0; i<9; i++){
         }
     }
 }
+fclose(file);
 
 bool dup[9];
 bool end = false;
