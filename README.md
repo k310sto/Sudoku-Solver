@@ -1,24 +1,31 @@
-# sudoku-destroyer
+# SUDOKU-SOLVER
 簡単な数独を解きます
 
 ## 概要
-注意:現行バージョンでは高難易度の問題を解くことはできません。<br>
-詳しくは[こちら](./README.md##複数手順の解法について)<br>
+注意:現バージョンでは低難易度の問題しか解くことができません。（[詳細](./README.md##複数手順の解法について)）<br>
 
 ## イメージ
 ここにスクショを貼るぜ
 
 ## 使い方
-### ダウンロード方法
-端末で以下を実行<br>
-```git clone https://github.com/k310sto/Sudoku-Destroyer.git```<br>
-おわり
-### 起動方法
-①ディレクトリ内に移動<br>
-```cd Sudoku-Destroyer```<br>
-②実行<br>
-```./destroyer```<br>
-おわり
+### インストール方法
+現在bashのみ対応<br>
+**ホームディレクトリ**で以下を実行<br>
+```
+cd ~
+git clone https://github.com/k310sto/Sudoku-Solver.git
+```
+ディレクトリ内に移動し、`install_bash.sh`を実行<br>
+```
+cd Sudoku-Solver
+sh install_bash.sh
+```
+## 起動方法
+コマンドは以下の通りです。
+```
+SdS     #Solverを起動
+SdSf    #おまけ　question.txtから問題を読み取りますが、それ以外は同じです
+```
 ### 記法
 起動すると、以下のようなメッセージが出ます。<br>
 ```
