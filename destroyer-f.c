@@ -186,10 +186,18 @@ if(resolved>=81) end=true;
 
 
 if(!error){ 
-    printf("Answer:\n");
+    printf("Answer :\n-------------------------\n");
     for(int i=0;i<9;i++){
-        for(int j=0;j<9;j++) printf("%d ",unit[i][j]);
+        printf("| ");
+        for(int j=0; j<9; j++){
+            if(unit[i][j]==0) printf(" ");
+            else printf("%d", unit[i][j]);
+            if(j==2||j==5||j==8) printf(" | ");
+            else printf(" ");
+        }
         printf("\n");
+        if(i==2||i==5) printf("|-------+-------+-------|\n");
+        if(i==8)       printf("-------------------------\n");
     }
 }
 

@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <ctype.h>
+#include <unistd.h>
 
 int block_y(int i, int *y){
     if(i==0 || i==3 || i==6){
@@ -39,12 +40,14 @@ int main(){
 char unit[9][10];
 bool error = false;
 
-printf("Let's play :\n");
+printf("Let's play :\n-------------------------\n\n");
 
 for(int i=0; i<9; i++){
     error = false;
     fgets(unit[i], 11, stdin);
-    for(int j=0; j<10; j++){
+    printf("\033[1A\033[0K");
+
+    for(int j=0; j<10&&!error; j++){
         if(unit[i][j]=='\n'){
             while(j<10){
                 unit[i][j] = '0';
@@ -52,21 +55,41 @@ for(int i=0; i<9; i++){
             }
         }
         else if(!isdigit(unit[i][j])){
-            printf("Error: Malformed\n");
-            i--;
-            for(int k=0; k<i; k++)
-                printf("%s\n", unit[k]);
+            if(unit[i][0]=='u'&&i>0){
+                printf("\033[1A\033[1A\033[0K");
+                i-=2;
+                printf("Undo\n");
+                usleep(300000);
+                printf("\033[1A\033[0K\n");
+            }
+            else{
+                printf("\033[1A\033[0KError: Malformed\n");
+                usleep(300000);
+                printf("\033[1A\033[0K\n");
+                i--;
+            }
             error = true;
-            break;
         }
-        else if(j==9){
+        if(j==9){
             while(getchar()!='\n');
-        }else;
+        }
     }
     if(!error) {
-        for(int k=0;k<9;k++){
+        for(int k=0;k<9;k++)
             unit[i][k] -= 48;
+
+        //ASCII
+        printf("\033[1A| ");
+        for(int j=0; j<9; j++){
+            if(unit[i][j]==0) printf(" ");
+            else printf("%d", unit[i][j]);
+            if(j==2||j==5||j==8) printf(" | ");
+            else printf(" ");
         }
+        printf("\n");
+        if(i==2||i==5) printf("|-------+-------+-------|\n");
+        if(i==8)       printf("-------------------------");
+        printf("\n");
     }
 }
 
@@ -186,10 +209,18 @@ if(resolved>=81) end=true;
 
 
 if(!error){ 
-    printf("Answer:\n");
+    printf("Answer :\n-------------------------\n");
     for(int i=0;i<9;i++){
-        for(int j=0;j<9;j++) printf("%d ",unit[i][j]);
+        printf("| ");
+        for(int j=0; j<9; j++){
+            if(unit[i][j]==0) printf(" ");
+            else printf("%d", unit[i][j]);
+            if(j==2||j==5||j==8) printf(" | ");
+            else printf(" ");
+        }
         printf("\n");
+        if(i==2||i==5) printf("|-------+-------+-------|\n");
+        if(i==8)       printf("-------------------------\n");
     }
 }
 
