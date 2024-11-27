@@ -39,11 +39,13 @@ int block_x(int j, int *x){
 int main(){
 char unit[9][10];
 bool error = false;
+bool reverse = false;
 
 printf("Let's play :\n-------------------------\n\n");
 
 for(int i=0; i<9; i++){
     error = false;
+    reverse = false;
     fgets(unit[i], 11, stdin);
     printf("\033[1A\033[0K");
 
@@ -56,22 +58,33 @@ for(int i=0; i<9; i++){
         }
         else if(!isdigit(unit[i][j])){
             if(unit[i][0]=='u'&&i>0){
-                printf("\033[1A\033[1A\033[0K");
+                printf("\033[1A\033[0K\033[1A\033[0K");
                 i-=2;
-                printf("Undo\n");
-                usleep(300000);
-                printf("\033[1A\033[0K\n");
+                printf("Undo%d\n",i);
+                error = true;
+                unit[i][0]=0;
+            }
+            else if(unit[i][0]=='-') {
+                    reverse = true;
+                    unit[i][0] = 0;
             }
             else{
-                printf("\033[1A\033[0KError: Malformed\n");
-                usleep(300000);
-                printf("\033[1A\033[0K\n");
+                printf("\033[1A\033[0KError: Malformed%d\n",i);
                 i--;
+                error = true;
+                j=9;
             }
-            error = true;
+
         }
         if(j==9){
             while(getchar()!='\n');
+        }
+    }
+    if(reverse){
+        for(int k=0;k<5;k++){
+            char tmp = unit[i][k];
+            unit[i][k] = unit[i][9-k];
+            unit[i][9-k] = tmp;
         }
     }
     if(!error) {
@@ -79,7 +92,7 @@ for(int i=0; i<9; i++){
             unit[i][k] -= 48;
 
         //ASCII
-        printf("\033[1A| ");
+        printf("\033[0K\033[1A| ");
         for(int j=0; j<9; j++){
             if(unit[i][j]==0) printf(" ");
             else printf("%d", unit[i][j]);
@@ -90,6 +103,9 @@ for(int i=0; i<9; i++){
         if(i==2||i==5) printf("|-------+-------+-------|\n");
         if(i==8)       printf("-------------------------");
         printf("\n");
+    }
+    else{
+        for(int j=0;j<10;j++) unit[i][j] = 0;
     }
 }
 
