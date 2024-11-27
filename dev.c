@@ -77,7 +77,7 @@ fclose(file);
 
 
 bool dup[9][9][9];  //true：無い　false：あるかも
-bool duptmp[9];    //
+bool duptmp[9][9];    //
 bool end = false;
 short resolved=0;
 short last = 0;
@@ -129,22 +129,26 @@ for(int j=0; j<9; j++){
             block_y(i, y);
             block_x(j, x);
             for(int mode=0;mode<3&&out;mode++){
-                for(int k=0;k<9;k++) duptmp[l]=true;
-                    if(mode==0){
-                        for(int l=0;l<9;l++)
-                            if(dup[k][j][l]==false) duptmp[l]=false;
- }else if(mode==1) for(int k=0;k<9;k++){ 
-
+                for(int k=0;k<9;k++)
+                for(int l=0;l<9;l++)
+                    duptmp[k][l]=true;
+                if(mode==0){
+                    for(int k=0;k<9;k++)
+                    for(int l=0;l<9;l++)
+                        if(dup[k][j][l]==false) duptmp[k][l]=false;
+                }
+                else if(mode==1)
+                    for(int k=0;k<9;k++)
+                    for(int l=0;l<9;l++)
                         if(dup[i][k][l]==false) duptmp[l]=false;
-                    else if(mode==2){ for(int k=0;k<9;k++){ 
-
-
-                        for(int m=0;m<9;m++){
+                else if(mode==2)
+                    for(int k=0;k<9;k++)
+                    for(int l=0;l<9;la  ++)
                         if(dup[i+y[k]][j+x[l]][m]==false) 
                             duptmp[l] = false;
-                        }
+                        
                     }
-                }
+                
                 }
                 for(int k=0;k<9;k++){
                     if(duptmp[k]==true){
