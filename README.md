@@ -4,7 +4,7 @@
 <img src="https://github.com/user-attachments/assets/28b5f273-fc42-456f-84eb-e8a6853c6eab" width="46.5%" > <img src="https://github.com/user-attachments/assets/f8f002cc-2289-4f0a-85ab-5b8e30d2e830" width="50%" >
 
 ## 注意
-現バージョンでは低難易度の問題のみ解くことができます。
+現バージョンでは高度な手順を踏まないため、解けない問題があります。
 
 ## 目次
 [インストール方法](./README.md#インストール方法)<br>
@@ -83,3 +83,4 @@ Let's play :
 ### 未解決の問題と課題
 - Undoやエラー処理(数字以外の入力)を沢山起こすと、意図しない場所まで書き換えられる問題
 - 複数の手順を必要とする解法の実装
+- 問題作成機能の実装
