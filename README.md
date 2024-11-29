@@ -6,7 +6,7 @@
 
 <img src="https://github.com/user-attachments/assets/28b5f273-fc42-456f-84eb-e8a6853c6eab" width="46.5%" > <img src="https://github.com/user-attachments/assets/f8f002cc-2289-4f0a-85ab-5b8e30d2e830" width="50%" >
 
-## 注意
+## おことわり
 現バージョンでは高度な手順を踏まないため、解けない問題があります。
 
 ## 目次
