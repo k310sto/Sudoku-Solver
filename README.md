@@ -1,4 +1,4 @@
-# SUDOKU-SOLVER
+# SUDOKU SOLVER
 9×9の簡単な数独を解きます。
 
 <img src="https://github.com/user-attachments/assets/28b5f273-fc42-456f-84eb-e8a6853c6eab" width="46.5%" > <img src="https://github.com/user-attachments/assets/f8f002cc-2289-4f0a-85ab-5b8e30d2e830" width="50%" >
