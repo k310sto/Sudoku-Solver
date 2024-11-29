@@ -63,7 +63,7 @@ for(int i=0; i<9; i++){
             if(unit[i][0]=='u'&&i>0){
                 printf("\033[1A\033[0K\033[1A\033[0K");
                 i-=2;
-                printf("Undo%d\n",i);
+                printf("Undo\n");
                 error = true;
                 unit[i][0]=0;
             }
@@ -72,7 +72,7 @@ for(int i=0; i<9; i++){
                     unit[i][0] = 0;
             }
             else{
-                printf("\033[1A\033[0KError: Malformed%d\n",i);
+                printf("\033[1A\033[0KError: Malformed\n",);
                 i--;
                 error = true;
                 j=9;
