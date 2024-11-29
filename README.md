@@ -8,7 +8,7 @@
 
 ## 目次
 [使い方](./README.md#使い方)<br>
-[追加機能&動作](./README.md#追加機能&動作)<br>
+[追加機能&動作](https://github.com/k310sto/Sudoku_Solver/blob/main/README.md#%E8%BF%BD%E5%8A%A0%E6%A9%9F%E8%83%BD%E5%8B%95%E4%BD%9C)<br>
 [その他](./README.md#その他)<br>
 [ライセンス](./README.md#ライセンス)<br>
 
