@@ -31,6 +31,7 @@ sh install_bash.sh
 cd ~/.Sudoku_Solver    #隠しファイルであることに注意
 sh uninstall_bash.sh   #ディレクトリごと削除されます
 cd ~
+rm -rf .Sudoku_Solver
 source ~/.bashrc
 ```
 ### 使用
