@@ -17,7 +17,6 @@
 
 ## インストール方法
 ※bashのみ対応<br>
-この方法を使用する場合、ディレクトリを**ホームディレクトリ**直下に置いて下さい。<br>
 ```
 cd ~
 git clone https://github.com/k310sto/Sudoku-Solver.git
@@ -31,9 +30,9 @@ sh install_bash.sh
 ディレクトリ内に移動し、`uninstall_bash.sh`を実行します。<br>
 ```
 cd ~/.Sudoku_Solver    #隠しファイルであることに注意
-sh uninstall_bash.sh   #ディレクトリごと消去されます
+sh uninstall_bash.sh   #ディレクトリごと削除されます
 cd ~
-bash
+source ~/.bashrc
 ```
 ## 起動方法
 コマンドは以下の通りです。
