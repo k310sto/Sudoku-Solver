@@ -1,11 +1,11 @@
 #!/bin/sh
-#SPDX-FileCopyrightText: 2024 Kensuke Sato
-#SPDX-License-Identifier: BSD-3-Clause
+# SPDX-FileCopyrightText: 2024 Kensuke Sato
+# SPDX-License-Identifier: BSD-3-Clause
 
 cd ~
-if grep -q "export PATH+=:~/.Sudoku-Solver/" "./.bashrc"; then
-	sed -i -e "s@export PATH+=:~/.Sudoku-Solver/@@g" ~/.bashrc;
+if grep -q "export PATH+=:~/.Sudoku_Solver/" "./.bashrc"; then
+	sed -i -e "s@export PATH+=:~/.Sudoku_Solver/@@g" ~/.bashrc;
 fi
-rm -rf ~/.Sudoku-Solver
+rm -rf ~/.Sudoku_Solver
 
 
