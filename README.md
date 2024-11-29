@@ -76,6 +76,7 @@ Let's play :
 000090035
 0000006
 ```
+※一度に入力すると表示が崩れますが、答えは正しく出力されます。
 参考：[数独無料問題集](http://数独無料問題集pdf.com/muryomondaishu.html)
 
 </details>
