@@ -36,9 +36,14 @@ int block_x(int j, int *x){
 }
 
 int main(){
+unsigned int clmx;
+printf("max cell: ");
+scanf("%d", &clmx)
+
 char unit[9][10];
 bool error = false;
 FILE* file;
+
 file=fopen("question.txt","r");
 for(int i=0; i<9; i++){
     error = false;
@@ -104,12 +109,17 @@ for(int j=0; j<9; j++){
                     dup[i][j][unit[i+y[k]][j+x[l]]-1] = true;
             }
             }
+            printf("%d:%d >>",i+1,j+1);
+            for(int k=0;k<9;k++)
+                if(!dup[i][j][k]) printf(" %d,",k+1);
+            printf("\n");
         }
         else if(unit[i][j]!=0){
             ans[i][j]=1;
             for(int k=0;k<9;k++) if((k+1)!=unit[i][j]) dup[i][j][k] = true;
-        }        
+        }
     }
+    if(i==8&&j==8) printf("\n");
     if(proc==1){
         if(unit[i][j]==0){
             bool out = true;
@@ -118,7 +128,7 @@ for(int j=0; j<9; j++){
             block_y(i, y);
             block_x(j, x);
             for(int mode=0;mode<3&&out;mode++){
-                for(int k=0;k<9;k++)
+                for(int k=0;k<9;k++){
                     duptmp[k]=true;
                 if(mode==0){
                     for(int k=0;k<9;k++){
@@ -156,18 +166,40 @@ for(int j=0; j<9; j++){
                 }
 
                 //trueが残っている場合、該当数字であることが確定する
-                for(int k=0;k<9;k++)
+                for(int k=0;k<9;k++){
                      if(duptmp[k]==true){
                         unit[i][j] = (k+1);
                         ans[i][j] = 1;
                         out = false;
                      }
+                }
             }
         }
+        //候補が１種である場合、確定させる
+        if(unit[i][j]==0){
+            int once=0;
+            for(int k=0;k<9;k++){
+                if(dup[i][j][k]==false){
+                    if(once==0)
+                        once=(k+1);
+                    else{
+                        k=9;
+                        once=0;
+                    }
+                }
+            }
+            if(once!=0){
+                unit[i][j] = once;
+                ans[i][j] = 1;
+                out = false;
+            }
+        }
+
     }
-}
-}
-}
+    }
+    }
+    }
+    }
 
 resolved = 0;
 for(int i=0; i<9; i++){
@@ -175,6 +207,7 @@ for(int i=0; i<9; i++){
         resolved += ans[i][j];
     }
 }
+
 if(resolved==last){
     printf("Error: Unsolvable\n");
     end = true;
