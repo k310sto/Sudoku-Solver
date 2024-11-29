@@ -1,4 +1,6 @@
 #!/bin/sh
+# SPDX-FileCopyrightText: 2024 Kensuke Sato
+# SPDX-License-Identifier: BSD-3-Clause
 
 gcc solver.c -o SDS
 cd ~
