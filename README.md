@@ -16,21 +16,21 @@
 
 
 ## インストール方法
-※現在bashのみ対応<br>
-この方法を使用する場合、**ホームディレクトリ**直下に置いて下さい。<br>
+※bashのみ対応<br>
+この方法を使用する場合、ディレクトリを**ホームディレクトリ**直下に置いて下さい。<br>
 ```
 cd ~
 git clone https://github.com/k310sto/Sudoku-Solver.git
 ```
 ディレクトリ内に移動し、`install_bash.sh`を実行<br>
 ```
-cd Sudoku-Solver
+cd Sudoku_Solver
 sh install_bash.sh
 ```
 ## アンインストール方法
 ディレクトリ内に移動し、`uninstall_bash.sh`を実行します。<br>
 ```
-cd ~/.Sudoku-Solver    #隠しファイルであることに注意
+cd ~/.Sudoku_Solver    #隠しファイルであることに注意
 sh uninstall_bash.sh   #ディレクトリごと消去されます
 cd ~
 bash
