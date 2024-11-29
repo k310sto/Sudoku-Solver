@@ -6,6 +6,5 @@ cd ~
 if grep -q "export PATH+=:~/.Sudoku_Solver/" "./.bashrc"; then
 	sed -i -e "s@export PATH+=:~/.Sudoku_Solver/@@g" ~/.bashrc;
 fi
-rm -rf ~/.Sudoku_Solver
 
 
