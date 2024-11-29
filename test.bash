@@ -1,4 +1,7 @@
 #!/bin/bash
+# SPDX-FileCopyrightText: 2024 Kensuke Sato
+# SPDX-License-Identifier: BSD-3-Clause
+
 res=0
 bash install_bash.sh
 res=$?
