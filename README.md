@@ -27,13 +27,12 @@ cd Sudoku_Solver
 sh install_bash.sh
 ```
 ### アンインストール方法
-※bashのみ対応<br>
 ディレクトリ内に移動し、`uninstall_bash.sh`を実行します。<br>
 ```
 cd ~/.Sudoku_Solver    #隠しファイルであることに注意
-sh uninstall_bash.sh   #ディレクトリごと削除されます
+sh uninstall_bash.sh   
 cd ~
-rm -rf .Sudoku_Solver
+rm -rf .Sudoku_Solver  #ディレクトリ削除
 source ~/.bashrc
 ```
 ### 使用
@@ -76,7 +75,7 @@ Let's play :
 000090035
 0000006
 ```
-※一度に入力すると表示が崩れますが、答えは正しく出力されます。
+※一度に入力すると表示が崩れますが、答えは正しく出力されます。<br>
 参考：[数独無料問題集](http://数独無料問題集pdf.com/muryomondaishu.html)
 
 </details>
@@ -95,7 +94,7 @@ Let's play :
 - Ubnutu 22.04.5 LTS
 - Microsoft Windows Server 2022 10.0.20348 Datacenter
 - macOS 14.7.1 23H222
-### 目標
+### 今後の目標
 - 高度な手順を必要とする解法の実装
 - 問題作成機能の実装
 - 可変数での実行（16×16，100×100...）
