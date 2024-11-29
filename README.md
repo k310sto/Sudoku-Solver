@@ -11,9 +11,9 @@
 [アンインストール方法](./README.md#アンインストール方法)<br>
 [起動方法](./README.md#起動方法)<br>
 [使い方](./README.md#使い方)<br>
-[ライセンス](./README.md#ライセンス)<br>
 [環境](./README.md#環境)<br>
-
+[その他](./README.md#その他)<br>
+[ライセンス](./README.md#ライセンス)<br>
 
 ## インストール方法
 ※bashのみ対応<br>
