@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2024 Kensuke Sato
+// SPDX-License-Identifier: BSD-3-Clause
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
