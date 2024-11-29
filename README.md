@@ -70,7 +70,7 @@ Let's play :
 
 ## その他
 ### 必須ソフトウェア
-- C (テスト済み：)
+- C
 ### テスト環境
 - Ubnutu 22.04.5 LTS
 - Microsoft Windows Server 2022　10.0.20348　Datacenter
