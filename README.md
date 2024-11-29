@@ -21,7 +21,7 @@
 cd ~
 git clone https://github.com/k310sto/Sudoku-Solver.git
 ```
-ディレクトリ内に移動し、`install_bash.sh`を実行<br>
+ディレクトリ内に移動し、`install_bash.sh`を実行します。<br>
 ```
 cd Sudoku_Solver
 sh install_bash.sh
