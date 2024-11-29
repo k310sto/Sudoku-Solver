@@ -16,7 +16,6 @@
 
 ## 使い方
 ### インストール方法
-※bashのみ対応<br>
 ```
 cd ~
 git clone https://github.com/k310sto/Sudoku-Solver.git
