@@ -4,11 +4,11 @@
 
 gcc solver.c -o SDS
 cd ~
-if find -name "Sudoku-Solver" | grep -q "~/Sudoku-Solver"; then
-	mv ~/Sudoku-Solver ~/.Sudoku-Solver
+if find -name "Sudoku_Solver" | grep -q "~/Sudoku_Solver"; then
+	mv ~/Sudoku_Solver ~/.Sudoku_Solver
 fi
-if ! grep -q "export PATH+=:~/.Sudoku-Solver/" "./.bashrc"; then
-	echo "export PATH+=:~/.Sudoku-Solver/" >> ~/.bashrc;
+if ! grep -q "export PATH+=:~/.Sudoku_Solver/" "./.bashrc"; then
+	echo "export PATH+=:~/.Sudoku_Solver/" >> ~/.bashrc;
 fi
 bash
 
