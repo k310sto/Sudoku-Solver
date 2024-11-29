@@ -14,5 +14,4 @@ fi
 if ! grep -q "export PATH+=:~/.Sudoku_Solver/" "./.bashrc"; then
 	echo "export PATH+=:~/.Sudoku_Solver/" >> ~/.bashrc;
 fi
-bash
 

@@ -241,7 +241,7 @@ if(!error){
         if(i==2||i==5) printf("|-------+-------+-------|\n");
         if(i==8)       printf("-------------------------\n");
     }
+    return 0;
 }
-
-return 0;
+else return 1;
 }
