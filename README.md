@@ -74,7 +74,7 @@ Let's play :
 - C
 ### テスト環境
 - Ubnutu 22.04.5 LTS
-- Microsoft Windows Server 2022　10.0.20348　Datacenter
+- Microsoft Windows Server 2022 10.0.20348 Datacenter
 - macOS 14.7.1 23H222
 ### 目標
 - 複数の手順を必要とする解法の実装
