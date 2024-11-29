@@ -1,5 +1,6 @@
 # SUDOKU SOLVER
 [![test](https://github.com/k310sto/Sudoku_Solver/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/k310sto/Sudoku_Solver/actions/workflows/test.yml)
+[![](https://img.shields.io/github/license/k310sto/Sudoku_Solver)](https://github.com/k310sto/Sudoku_Solver/blob/main/LICENSE)
 <br>
 9×9の簡単な数独を解きます。
 
