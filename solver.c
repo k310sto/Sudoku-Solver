@@ -72,7 +72,7 @@ for(int i=0; i<9; i++){
                     unit[i][0] = 0;
             }
             else{
-                printf("\033[1A\033[0KError: Malformed\n",);
+                printf("\033[1A\033[0KError: Malformed\n");
                 i--;
                 error = true;
                 j=9;
