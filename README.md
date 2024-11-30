@@ -17,6 +17,7 @@
 
 ## 使い方
 ### インストール方法
+ホームディレクトリに移動し、リポジトリをクローンします。
 ```
 cd ~
 git clone https://github.com/k310sto/Sudoku-Solver.git
@@ -35,7 +36,7 @@ cd ~
 rm -rf .Sudoku_Solver  #ディレクトリ削除
 source ~/.bashrc
 ```
-### 使用
+### 使用方法
 コマンドは以下の通りです。
 ```
 SDS     #Solverを起動
